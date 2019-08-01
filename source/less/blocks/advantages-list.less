@@ -1,0 +1,54 @@
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: count;
+}
+
+.advantages-list__item {
+  padding-top: 9px;
+  counter-increment: count;
+  text-align: center;
+}
+
+.advantages-list__text-wrapper {
+  padding-top: 15px;
+  padding-bottom: 24px;
+}
+
+.advantages-list__photo {
+  display: block;
+}
+
+.advantages-list__title {
+  margin: 16px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.advantages-list__title::after {
+  display: block;
+  margin: 9px auto;
+  width: 50px;
+  height: 20px;
+  content: "\2013  №" counter(count) " \2013";
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "PT Sans";
+  font-weight: normal;
+}
+
+.advantages-list__promo {
+  margin: 16px 20px;
+  padding: 0;
+  line-height: 21px;
+  font-size: 14px;
+  font-family: "PT Sans";
+  font-weight: normal;
+}
+
+.advantages-list__item--no-photo {
+  padding-bottom: 13px;
+  border-bottom: 1px solid black;
+}
