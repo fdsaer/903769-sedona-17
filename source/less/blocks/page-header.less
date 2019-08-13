@@ -1,21 +1,36 @@
 .page-header {
+  padding-bottom: 20px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom; /*280px;*/
   text-align: center;
 }
 
-
 .page-header__slogan {
   display: block;
   height: 343px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 80px;
   vertical-align: top;
 }
 
+.page-header--inner .page-header__slogan {
+  height: 112px;
+}
+
 @media (min-width: 501px) {
+  .page-header--inner {
+    padding-bottom: 116px;
+  }
+
   .page-header__slogan {
+    margin-top: 155px;
     width: 400px;
+  }
+
+  .page-header--inner .page-header__slogan {
+    margin-top: 95px;
+    width: 458px;
+    height: auto;
   }
 }

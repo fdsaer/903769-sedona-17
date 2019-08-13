@@ -1,7 +1,3 @@
-button {
-  display: none;
-}
-
 .cite-list {
   margin: 0;
   padding: 0;
@@ -9,31 +5,50 @@ button {
 }
 
 .cite-list__item {
-  padding-top: 7px;
-  padding-bottom: 7px;
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8;
-  line-height: 40px;
-  text-align: center;
-  background-color: #81b3d2;
+  background-color: @highlighting-color;
+  color: #ffffff;
+
+  &:hover {
+    border-top: 1px solid #9ac2db;
+    border-bottom: 1px solid #678fa8;
+    background-color: @hover-button-color;
+  }
+
+  &:active {
+    border-top: 1px solid #678fa8;
+    border-bottom: 1px solid #cccccc;
+    background-color: @down-button-color;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
-.cite-list__item:hover {
-  border-top: 1px solid #9ac2db;
-  border-bottom: 1px solid #678fa8;
-  background-color: #669ec0;
+.cite-list__item--active {
+  border-top: 1px solid #678fa8;
+  border-bottom: 1px solid #cccccc;
+  background-color: @down-button-color;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .cite-list__link {
-  color: #ffffff;
-  font-family: "PT Sans Bold", Arial, sans-serif;
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: inherit;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
   line-height: 26px;
   font-size: 18px;
   text-decoration: none;
 }
 
 .cite-list__logo {
+  margin: 0;
+  padding: 0;
+  position: absolute;
   display: block;
+  left: 50%;
+  margin-left: -51px;
 }
 
 .cite-list__logo-image {
@@ -43,23 +58,51 @@ button {
 @media (min-width: 501px) {
   .cite-list {
     display: flex;
-    position: relative;
     justify-content: space-between;
+    background-color: #ffffff;
   }
 
   .cite-list__item {
+    width: 153px;
+    border-color: #ffffff;
     background-color: #ffffff;
-  }
-  
-  .cite-list__link {
     color: #000000;
+
+    &:hover {
+      border-color: #ffffff;
+      background-color: #ffffff;
+      color: @highlighting-color;
+    }
+
+    &:active {
+      border-color: #ffffff;
+      background-color: #ffffff;
+      color: rgba(0, 0, 0, 0.3);
+    }
   }
-  
-  .cite-list__logo-image {
-    display: block;
-    position: absolute;
+
+  .cite-list__item--active {
+    color: #766357;
+
+    &:hover {
+      color: #604e43;
+    }
+
+    &:active {
+      color: rgba(118, 99, 87, 0.3);
+    }
+  }
+
+  .cite-list__item:nth-child(2) {
+    margin-right: 156px;
+  }
+
+  .cite-list__link {
+    color: inherit;
+    font-size: 14px;
+  }
+
+  .cite-list__logo {
     top: 0;
-    left: 50%;
-    margin-left: -51px;
   }
 }

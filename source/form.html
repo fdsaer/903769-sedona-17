@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <button class="main-nav__on-toggle" type="button">
-          Открыть меню
+      <nav class="main-nav  main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__menu cite-list">
           <li class="cite-list__item">
@@ -18,11 +19,11 @@
           <li class="cite-list__item">
             <a class="cite-list__link" href="photo.html">Фото и видео</a>
           </li>
-          <li class="cite-list__item">
+          <li class="cite-list__item cite-list__item--active">
             <a class="cite-list__link" href="#">Форма отзыва</a>
           </li>
           <li class="cite-list__item">
-            <a class="cite-list__link" href="#">HTML Academy</a>
+            <a class="cite-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
         <a class="cite-list__logo" href="index.html">
@@ -32,22 +33,51 @@
       <img class="page-header__slogan" src="img/text-sedona.svg" width="282" height="80" alt="Welcome to the gergeus Sedona">
     </header>
     <footer class="page-footer">
-      <strong class="page-footer__hashtag">#visitsedona</strong>
+      <p class="page-footer__hashtag"><strong>#visitsedona</strong></p>
       <ul class="page-footer__social social-links">
         <li class="social-links__item">
-          <a class="social-links__link">twitter</a>
+          <a class="social-links__link" href="https://twitter.com/htmlacademy_ru">
+            <span class="visually-hidden">twitter</span>
+            <img class="social-links__image" src="../img/icon-twitter.svg" width="" height="">
+          </a>
         </li>
         <li class="social-links__item">
-          <a class="social-links__link">facebook</a>
+          <a class="social-links__link" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">facebook</span>
+            <img class="social-links__image" src="../img/icon-facebook.svg" width="" height="">
+          </a>
         </li>
         <li class="social-links__item">
-          <a class="social-links__link">youtube</a>
+          <a class="social-links__link" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">youtube</span>
+            <img class="social-links__image" src="../img/icon-youtube.svg" width="" height="">
+          </a>
         </li>
       </ul>
       <p class="page-footer__copyrights copyrights">
-        <b class="copyrights__text">Разработано</b>
-        <a class="copyrights__link">HTML Academy</a>
+        <b class="copyrights__text">Разработано</b
+        ><a class="copyrights__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyrights__author-name visually-hidden">HTML Academy</span>
+          <img class="copyrights__image" src="../img/logo-htmlacademy.svg" width="" height="">
+        </a>
       </p>
     </footer>
+    <script>
+      var mainMenu = document.querySelector('.main-nav--nojs');
+      var menuToggle = mainMenu.querySelector('.main-nav__toggle');
+      var menuClosed = true;
+      mainMenu.classList.remove('main-nav--nojs');
+      menuToggle.addEventListener('click', function () {
+        if (menuClosed) {
+          mainMenu.classList.remove('main-nav--closed');
+          mainMenu.classList.add('main-nav--opened');
+          menuClosed = false;
+        } else {
+          mainMenu.classList.remove('main-nav--opened');
+          mainMenu.classList.add('main-nav--closed');
+          menuClosed = true;
+        }
+      });
+    </script>
   </body>
 </html>
