@@ -4,25 +4,26 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header class="page-header">
-      <nav class="main-nav">
-        <button class="main-nav__on-toggle" type="button">
-          Открыть меню
+    <header class="page-header page-header--inner">
+      <nav class="main-nav  main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__menu cite-list">
           <li class="cite-list__item">
             <a class="cite-list__link" href="index.html">Главная</a>
           </li>
-          <li class="cite-list__item">
+          <li class="cite-list__item cite-list__item--active">
             <a class="cite-list__link" href="#">Фото и видео</a>
           </li>
           <li class="cite-list__item">
             <a class="cite-list__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="cite-list__item">
-            <a class="cite-list__link" href="#">HTML Academy</a>
+            <a class="cite-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
         <a class="cite-list__logo" href="index.html">
@@ -31,7 +32,7 @@
       </nav>
       <img class="page-header__slogan" src="img/text-sedona.svg" width="282" height="80" alt="Welcome to the gergeus Sedona">
     </header>
-    <main class="page-main">
+    <main class="page-main page-main--inner container">
       <h1 class="page-main__title">Фото и видео</h1>
       <p class="page-main__promo">
         Не можете решиться на путешествие из-за курса?
@@ -39,55 +40,110 @@
       </p>
       <section class="page-main__photo gallery">
         <h2 class="visually-hidden">Галерея</h2>
-        <ul class="gallery__list">
-          <li class="gallery__item">
-            <img class="gallery__image" src="img/photo-sunset-mobile@1x.jpg">
-            <h3 class="gallery__title">Неродные просторы</h3>
-            <p class="gallery__author">Автор фото: <span class="gallery__author-name">Борис</span></p>
-            <button class="gallery__like-button" type="button">Понравилось</button>
-            <span class="gallery__like-count">1350</span>
+        <ul class="gallery-list">
+          <li class="gallery-list__item">
+            <img class="gallery-list__image" src="img/photo-sunset-mobile@1x.jpg">
+            <div class="gallery-list__caption">
+              <div class="gallery-list__text-wrapper">
+                <h3 class="gallery-list__title">Неродные просторы</h3>
+                <p class="gallery-list__author">Автор фото: <span class="gallery__author-name">Борис</span></p>
+              </div>
+              <div class="gallery-list__button-wrapper">
+                <button class="gallery-list__like-button" type="button">Понравилось</button>
+                <span class="gallery-list__like-count">1350</span>
+              </div>
+            </div>
           </li>
-          <li class="gallery__item">
-            <img class="gallery__image" src="img/photo-cactus-mobile@1x.jpg">
-            <h3 class="gallery__title">Местная растительность</h3>
-            <p class="gallery__author">Автор фото: <span class="gallery__author-name">Сергей</span></p>
-            <button class="gallery__like-button" type="button">Понравилось</button>
-            <span class="gallery__like-count">143</span>
+          <li class="gallery-list__item">
+            <img class="gallery-list__image" src="img/photo-cactus-mobile@1x.jpg">
+            <div class="gallery-list__caption">
+              <div class="gallery-list__text-wrapper">
+                <h3 class="gallery-list__title">Местная растительность</h3>
+                <p class="gallery-list__author">Автор фото: <span class="gallery__author-name">Сергей</span></p>
+              </div>
+              <div class="gallery-list__button-wrapper">
+                <button class="gallery-list__like-button" type="button">Понравилось</button>
+                <span class="gallery-list__like-count">143</span>
+              </div>
+            </div>
           </li>
-          <li class="gallery__item">
-            <img class="gallery__image" src="img/photo-roads-mobile@1x.jpg">
-            <h3 class="gallery__title">Дорога на север</h3>
-            <p class="gallery__author">Автор фото: <span class="gallery__author-name">Петр</span></p>
-            <button class="gallery__like-button" type="button">Понравилось</button>
-            <span class="gallery__like-count">96</span>
-          </li class="gallery__item">
-          <li>
-            <img class="gallery__image" src="img/photo-bridge-mobile@1x.jpg">
-            <h3 class="gallery__title">Мост дьявола</h3>
-            <p class="gallery__author">Автор фото: <span class="gallery__author-name">Антон</span></p>
-            <button class="gallery__like-button" type="button">Понравилось</button>
-            <span class="gallery__like-count">254</span>
+          <li class="gallery-list__item">
+            <img class="gallery-list__image" src="img/photo-roads-mobile@1x.jpg">
+            <div class="gallery-list__caption">
+              <div class="gallery-list__text-wrapper">
+                <h3 class="gallery-list__title">Дорога на север</h3>
+                <p class="gallery-list__author">Автор фото: <span class="gallery__author-name">Петр</span></p>
+              </div>
+              <div class="gallery-list__button-wrapper">
+                <button class="gallery-list__like-button" type="button">Понравилось</button>
+                <span class="gallery-list__like-count">96</span>
+              </div>
+            </div>
+          </li>
+          <li class="gallery-list__item">
+            <img class="gallery-list__image" src="img/photo-bridge-mobile@1x.jpg">
+            <div class="gallery-list__caption">
+              <div class="gallery-list__text-wrapper">
+                <h3 class="gallery-list__title">Мост дьявола</h3>
+                <p class="gallery-list__author">Автор фото: <span class="gallery__author-name">Антон</span></p>
+              </div>
+              <div class="gallery-list__button-wrapper">
+                <button class="gallery-list__like-button" type="button">Понравилось</button>
+                <span class="gallery-list__like-count">254</span>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
+      <section class="page-main__video">
+      </section>
     </main>
     <footer class="page-footer">
-      <strong class="page-footer__hashtag">#visitsedona</strong>
+      <p class="page-footer__hashtag"><strong>#visitsedona</strong></p>
       <ul class="page-footer__social social-links">
         <li class="social-links__item">
-          <a class="social-links__link">twitter</a>
+          <a class="social-links__link" href="https://twitter.com/htmlacademy_ru">
+            <span class="visually-hidden">twitter</span>
+            <img class="social-links__image" src="../img/icon-twitter.svg" width="" height="">
+          </a>
         </li>
         <li class="social-links__item">
-          <a class="social-links__link">facebook</a>
+          <a class="social-links__link" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">facebook</span>
+            <img class="social-links__image" src="../img/icon-facebook.svg" width="" height="">
+          </a>
         </li>
         <li class="social-links__item">
-          <a class="social-links__link">youtube</a>
+          <a class="social-links__link" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">youtube</span>
+            <img class="social-links__image" src="../img/icon-youtube.svg" width="" height="">
+          </a>
         </li>
       </ul>
       <p class="page-footer__copyrights copyrights">
-        <b class="copyrights__text">Разработано</b>
-        <a class="copyrights__link">HTML Academy</a>
+        <b class="copyrights__text">Разработано</b
+        ><a class="copyrights__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyrights__author-name visually-hidden">HTML Academy</span>
+          <img class="copyrights__image" src="../img/logo-htmlacademy.svg" width="" height="">
+        </a>
       </p>
     </footer>
+    <script>
+      var mainMenu = document.querySelector('.main-nav--nojs');
+      var menuToggle = mainMenu.querySelector('.main-nav__toggle');
+      var menuClosed = true;
+      mainMenu.classList.remove('main-nav--nojs');
+      menuToggle.addEventListener('click', function () {
+        if (menuClosed) {
+          mainMenu.classList.remove('main-nav--closed');
+          mainMenu.classList.add('main-nav--opened');
+          menuClosed = false;
+        } else {
+          mainMenu.classList.remove('main-nav--opened');
+          mainMenu.classList.add('main-nav--closed');
+          menuClosed = true;
+        }
+      });
+    </script>
   </body>
 </html>

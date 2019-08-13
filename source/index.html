@@ -8,12 +8,12 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <button class="main-nav__on-toggle" type="button">
-          Открыть меню
+      <nav class="main-nav  main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__menu cite-list">
-          <li class="cite-list__item">
+          <li class="cite-list__item cite-list__item--active">
             <a class="cite-list__link" href="#">Главная</a>
           </li>
           <li class="cite-list__item">
@@ -23,7 +23,7 @@
             <a class="cite-list__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="cite-list__item">
-            <a class="cite-list__link" href="#">HTML Academy</a>
+            <a class="cite-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
         <a class="cite-list__logo">
@@ -32,8 +32,8 @@
       </nav>
       <img class="page-header__slogan" src="img/text-sedona-index.svg" width="282" height="214" alt="Welcome to the gergeus Sedona">
     </header>
-    <main class="page-main">
-      <h1 class="page-main__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+    <main class="page-main container">
+      <h1 class="page-main__title">Седона &#8211 небольшой городок в Аризоне, заслуживающий большего!</h1>
       <p class="page-main__promo">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       <section class="advantages">
         <ol class="advantages-list">
@@ -42,7 +42,7 @@
               <div class="advantages-list__text-wrapper">
                 <h2 class="advantages-list__title">Настоящий городок</h2>
                 <p class="advantages-list__promo">Седона не аттракцион для туристов, там течет своя жизнь</p>
-              </div>            
+              </div>
               <img class="advantages-list__photo real-town__photo" src="../img/main-city-mobile@1x.jpg" width="320" height="260" alt="Улочки нашего городка">
             </div>
             <ul class="real-town__list town-features">
@@ -69,40 +69,71 @@
               <img class="advantages-list__photo devil-bridge__photo" src="../img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Мост дьявола">
             </div>
           </li>
-          <li class="advantages-list__item advantages-list__item--no-photo">
-            <h2 class="advantages-list__title">Небольшая площадь</h2>
-            <p class="advantages-list__promo">Все интересные места находятся очень близко</p>
-          </li>
-          <li class="advantages-list__item advantages-list__item--no-photo">
-            <h2 class="advantages-list__title">Красивая дорога</h2>
-            <p class="advantages-list__promo">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-          <li class="advantages-list__item advantages-list__item--no-photo">
-            <h2 class="advantages-list__title">Мало туристов</h2>
-            <p class="advantages-list__promo">Большинство едет в Гранд Каньон и толпится там</p>
-          </li>
+          <div class="advantages-list__no-photo-items">
+            <li class="advantages-list__item advantages-list__item--no-photo">
+              <h2 class="advantages-list__title">Небольшая площадь</h2>
+              <p class="advantages-list__promo">Все интересные места находятся очень близко</p>
+            </li>
+            <li class="advantages-list__item advantages-list__item--no-photo">
+              <h2 class="advantages-list__title">Красивая дорога</h2>
+              <p class="advantages-list__promo">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li class="advantages-list__item advantages-list__item--no-photo">
+              <h2 class="advantages-list__title">Мало туристов</h2>
+              <p class="advantages-list__promo">Большинство едет в Гранд Каньон и толпится там</p>
+            </li>
+          </div>
         </ol>
       </section>
       <section class="booking">
       </section>
     </main>
     <footer class="page-footer">
-      <strong class="page-footer__hashtag">#visitsedona</strong>
+      <p class="page-footer__hashtag"><strong>#visitsedona</strong></p>
       <ul class="page-footer__social social-links">
         <li class="social-links__item">
-          <a class="social-links__link">twitter</a>
+          <a class="social-links__link" href="https://twitter.com/htmlacademy_ru">
+            <span class="visually-hidden">twitter</span>
+            <img class="social-links__image" src="../img/icon-twitter.svg" width="" height="">
+          </a>
         </li>
         <li class="social-links__item">
-          <a class="social-links__link">facebook</a>
+          <a class="social-links__link" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">facebook</span>
+            <img class="social-links__image" src="../img/icon-facebook.svg" width="" height="">
+          </a>
         </li>
         <li class="social-links__item">
-          <a class="social-links__link">youtube</a>
+          <a class="social-links__link" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">youtube</span>
+            <img class="social-links__image" src="../img/icon-youtube.svg" width="" height="">
+          </a>
         </li>
       </ul>
       <p class="page-footer__copyrights copyrights">
-        <b class="copyrights__text">Разработано</b>
-        <a class="copyrights__link">HTML Academy</a>
+        <b class="copyrights__text">Разработано</b
+        ><a class="copyrights__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyrights__author-name visually-hidden">HTML Academy</span>
+          <img class="copyrights__image" src="../img/logo-htmlacademy.svg" width="27" height="34">
+        </a>
       </p>
     </footer>
+    <script>
+      /*var mainMenu = document.querySelector('.main-nav--nojs');
+      var menuToggle = mainMenu.querySelector('.main-nav__toggle');
+      var menuClosed = true;
+      mainMenu.classList.remove('main-nav--nojs');
+      menuToggle.addEventListener('click', function () {
+        if (menuClosed) {
+          mainMenu.classList.remove('main-nav--closed');
+          mainMenu.classList.add('main-nav--opened');
+          menuClosed = false;
+        } else {
+          mainMenu.classList.remove('main-nav--opened');
+          mainMenu.classList.add('main-nav--closed');
+          menuClosed = true;
+        }
+      });*/
+    </script>
   </body>
 </html>

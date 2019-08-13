@@ -1,0 +1,43 @@
+.social-links {
+  margin: 0;
+  padding: 0;
+  margin-top: 37px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links__item {
+  margin: 0 3px;
+  width: 46px;
+  height: 48px;
+  background-color: @highlighting-color;
+
+  &:hover {
+    background-color: @hover-button-color;
+  }
+
+  &:active {
+    background-color: @down-button-color;
+  }
+}
+
+.social-links__link {
+  line-height: 48px;
+  display: block;
+}
+
+.social-links__image {
+  vertical-align: middle;
+}
+
+.social-links__link:active {
+  opacity: 0.3;
+}
+
+@media (min-width: 500px) {
+  .social-links {
+    margin: 0;
+    padding: 0;
+  }
+}

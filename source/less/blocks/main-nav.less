@@ -1,5 +1,52 @@
+@media (max-width: 500px) {
+  .main-nav {
+    margin-bottom: 40px;
+    border-bottom: 1px solid transparent;
+  }
+
+  .main-nav--closed .main-nav__menu {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__menu {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__menu {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+
+  .main-nav__toggle {
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 23px;
+    height: 22px;
+    z-index: 10;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    background-image: url("../img/icon-menu.svg");
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/icon-cross.svg");
+  }
+}
+
 @media (min-width: 501px) {
-  .main-nav__on-toggle {
+  .main-nav__toggle {
     display: none;
   }
 }

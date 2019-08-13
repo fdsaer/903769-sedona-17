@@ -6,6 +6,8 @@
 }
 
 .advantages-list__item {
+  display: block;
+  width: 100%;
   padding-top: 9px;
   counter-increment: count;
   text-align: center;
@@ -14,6 +16,11 @@
 .advantages-list__text-wrapper {
   padding-top: 15px;
   padding-bottom: 24px;
+}
+
+.advantages-list__item--photo .advantages-list__text-wrapper {
+  color: #ffffff;
+  background-color: @highlighting-color;
 }
 
 .advantages-list__photo {
@@ -35,7 +42,7 @@
   content: "\2013  №" counter(count) " \2013";
   font-size: 14px;
   line-height: 21px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
 }
 
@@ -44,8 +51,12 @@
   padding: 0;
   line-height: 21px;
   font-size: 14px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
+}
+
+.advantages-list__no-photo-items {
+  background-color: #eeeeee;
 }
 
 .advantages-list__item--no-photo {
@@ -56,17 +67,38 @@
 @media (min-width: 501px) {
   .advantages-list {
     max-width: 768px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .advantages-list__item-wrapper {
     display: flex;
   }
-  
+
+  .advantages-list__text-wrapper {
+    width: 33%;
+  }
+
+  .advantages-list__item:nth-child(2) .advantages-list__text-wrapper {
+    order: 2;
+  }
+
+  .advantages-list__no-photo-items {
+    display: flex;
+  }
+
+  .advantages-list__title {
+    margin: 30px 49px;
+    font-size: 21px;
+  }
+
   .advantages-list__item--no-photo {
     min-width: 100px;
     max-width: 250px;
+    border: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .advantages-list {
+    max-width: 1200px;
   }
 }

@@ -6,20 +6,88 @@
 }
 
 .town-features__item {
+  position: relative;
   margin-bottom: 28px;
 }
 
 .town-features__title {
   margin: 0;
   padding: 0;
-  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
   line-height: 26px;
   font-size: 18px;
+}
+
+.town-features__item::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -49px;
+  width: 39px;
+  height: 37px;
+  background-image: url("../img/icon-house.svg");
+  background-size: contain;
+}
+
+.town-features__item:nth-child(2)::before {
+  width: 32px;
+  height: 38px;
+  background-image: url("../img/icon-gift.svg");
+}
+
+.town-features__item:nth-child(3)::before {
+  width: 40px;
+  height: 35px;
+  background-image: url("../img/icon-burger.svg");
 }
 
 @media (min-width: 501px) {
   .town-features {
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding-top: 117px;
     text-align: center;
+    justify-content: space-around;
+  }
+
+  .town-features__item {
+    width: 166px;
+  }
+
+  .town-features__item:nth-child(2) {
+    order: 1;
+  }
+
+  .town-features__item::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 75px;
+    height: 72px;
+    margin: -37px;
+    background-image: url("../img/icon-house.svg");
+  }
+
+  .town-features__item:nth-child(2)::before {
+    width: 63px;
+    height: 75px;
+    background-image: url("../img/icon-gift.svg");
+  }
+
+  .town-features__item:nth-child(3)::before {
+    width: 76px;
+    height: 69px;
+    background-image: url("../img/icon-burger.svg");
+  }
+
+  .town-features__title {
+    font-size: 21px;
+  }
+
+  .town-features__promo {
+    margin-top: 21px;
   }
 }
