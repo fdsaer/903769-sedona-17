@@ -1,10 +1,11 @@
-.cite-list {
-  margin: 0;
+.site-list {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
 
-.cite-list__item {
+.site-list__item {
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8;
   background-color: @highlighting-color;
@@ -22,19 +23,18 @@
     background-color: @down-button-color;
     color: rgba(255, 255, 255, 0.3);
   }
+
+  &--active {
+    border-top: 1px solid #678fa8;
+    border-bottom: 1px solid #cccccc;
+    background-color: @down-button-color;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
-.cite-list__item--active {
-  border-top: 1px solid #678fa8;
-  border-bottom: 1px solid #cccccc;
-  background-color: @down-button-color;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.cite-list__link {
+.site-list__link {
   display: block;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding: 14px 0;
   color: inherit;
   font-family: "PT Sans Bold", "Arial", sans-serif;
   line-height: 26px;
@@ -42,28 +42,36 @@
   text-decoration: none;
 }
 
-.cite-list__logo {
+.site-list__logo-wrapper {
+  height: 56px;
+  background-color: #ffffff;
+}
+
+.site-list__logo {
   margin: 0;
   padding: 0;
   position: absolute;
   display: block;
   left: 50%;
   margin-left: -51px;
+  z-index: 1;
 }
 
-.cite-list__logo-image {
+.site-list__logo-image {
   display: block;
+  width: 102px;
+  height: auto;
 }
 
 @media (min-width: 501px) {
-  .cite-list {
+  .site-list {
     display: flex;
     justify-content: space-between;
     background-color: #ffffff;
   }
 
-  .cite-list__item {
-    width: 153px;
+  .site-list__item {
+    width: 20%;
     border-color: #ffffff;
     background-color: #ffffff;
     color: #000000;
@@ -79,30 +87,45 @@
       background-color: #ffffff;
       color: rgba(0, 0, 0, 0.3);
     }
-  }
 
-  .cite-list__item--active {
-    color: #766357;
-
-    &:hover {
-      color: #604e43;
+    &:nth-child(2) {
+      margin-right: 20%;
     }
 
-    &:active {
-      color: rgba(118, 99, 87, 0.3);
+    &--active {
+      color: #766357;
+
+      &:hover {
+        color: #604e43;
+      }
+
+      &:active {
+        color: rgba(118, 99, 87, 0.3);
+      }
     }
   }
 
-  .cite-list__item:nth-child(2) {
-    margin-right: 156px;
-  }
-
-  .cite-list__link {
+  .site-list__link {
+    padding: 14px 10px;
     color: inherit;
     font-size: 14px;
   }
 
-  .cite-list__logo {
+  .site-list__logo {
     top: 0;
+  }
+
+  .site-list__logo-wrapper {
+    height: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .site-list__logo {
+    margin-left: -187/2px;
+  }
+
+  .site-list__logo-image {
+    width: 187px;
   }
 }
