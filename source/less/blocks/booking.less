@@ -1,9 +1,49 @@
-.booking {
-  min-height: 672px;
+.booking__title {
+  margin: 0;
+  padding: 0;
+  margin-top: 27px;
+  text-align: center;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-weight: bold;
+  line-height: 26px;
+  font-size: 21px;
 }
 
-@media (min-width: 501px) {
-  .booking {
-    min-height: 700px;
+.booking__promo {
+  margin: 0;
+  padding: 0 15px;
+  margin-top: 19px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.booking__link {
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 49px;
+  padding: 16px 20px;
+  text-align: center;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-weight: bold;
+  line-height: 26px;
+  font-size: 21px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: @highlighting-color;
+
+  &:hover {
+    background-color: @hover-button-color;
   }
+
+  &:active {
+    background-color: @down-button-color;
+  }
+}
+
+.booking__map {
+  width: 100%;
+  height: 350px;
+  display: block;
 }
