@@ -1,6 +1,7 @@
 .page-footer {
   margin-top: 36px;
   text-align: center;
+  width: 100%;
   background-color: #fefefe;
 }
 
@@ -13,9 +14,26 @@
 
 @media (min-width: 500px) {
   .page-footer {
+    margin-top: 0;
+    padding: 32px 0;
+  }
+
+  .page-footer__wrapper {
+    width: 84%;
     display: flex;
-    padding: 35px 0;
+    margin: 0 auto;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
+  }
+
+  .page-footer__hashtag {
+    padding-bottom: 3px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .page-footer__wrapper {
+    width: 80%;
+    max-width: 960px;
   }
 }

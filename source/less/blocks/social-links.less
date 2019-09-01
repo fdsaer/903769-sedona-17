@@ -1,19 +1,22 @@
 .social-links {
-  margin: 0;
-  padding: 0;
-  margin-top: 37px;
-  list-style: none;
   display: flex;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 34px;
+  list-style: none;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .social-links__item {
-  margin: 0 3px;
+  margin: 3px 3px;
   width: 46px;
   height: 48px;
   background-color: @highlighting-color;
 
-  &:hover {
+  &:hover,
+  :focus {
     background-color: @hover-button-color;
   }
 
@@ -39,5 +42,7 @@
   .social-links {
     margin: 0;
     padding: 0;
+    padding-right: 11px;
+    max-width: none;
   }
 }

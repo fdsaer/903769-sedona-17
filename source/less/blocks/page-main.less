@@ -15,25 +15,35 @@
   text-align: center;
   line-height: 26px;
   font-size: 14px;
+  letter-spacing: -0.01px;
 }
 
-.page-main--inner {
+.page-main--photo {
   line-height: 24px;
 }
 
-.page-main--inner .page-main__promo {
+.page-main--photo .page-main__promo {
+  margin-top: 25px;
   margin-bottom: 28px;
   line-height: 24px;
 }
 
-.page-main__video {
+.page-main--form {
+  line-height: 26px;
+}
 
+.page-main--form .page-main__promo {
+  padding: 0 20px;
+  margin-top: 25px;
+  margin-bottom: 36px;
+  line-height: 24px;
 }
 
 @media (min-width: 501px) {
   .page-main__title {
     margin: 0 auto;
     margin-top: 49px;
+    padding: 0;
     width: 500px;
     font-size: 21px;
   }
@@ -51,5 +61,28 @@
   .page-main--inner .page-main__promo {
     width: 440px;
     margin-top: 31px;
+  }
+
+  .page-main--photo .page-main__promo {
+    margin-bottom: 69px;
+  }
+
+  .page-main--form .page-main__promo {
+    margin-bottom: 73px;
+  }
+}
+
+@media (min-width: 769px) {
+  .page-main--inner .page-main__title {
+    margin-top: 112px;
+  }
+
+  .page-main--form .page-main__promo {
+    margin-bottom: 58px;
+    letter-spacing: -0.1px;
+  }
+
+  .page-main--photo .page-main__promo {
+    margin-bottom: 71px;
   }
 }

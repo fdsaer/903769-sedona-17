@@ -1,7 +1,7 @@
 .copyrights {
   margin: 0;
   padding: 0;
-  margin-top: 40px;
+  margin-top: 37px;
 }
 
 .copyrights__text {
@@ -13,7 +13,11 @@
   display: inline-block;
 }
 
-.copyrights__image {
+.copyrights__link:focus .copyrights__image {
+  fill: @highlighting-color;
+}
+
+.copyrights__link .copyrights__image {
   vertical-align: middle;
 
   &:hover {

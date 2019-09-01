@@ -48,8 +48,10 @@ gulp.task("html", function () {
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("copy", function () { 
+gulp.task("copy", function () {
   return gulp.src([
+    "source/css/**/*.*"
+    "source/js/**/*.*"
     "source/img/**/*.*",
     "source/fonts/**/*.{woff,woff2}"
     ], {base: "source"})
@@ -58,10 +60,6 @@ gulp.task("copy", function () {
 
 gulp.task("del", function () {
   return del("build");
-});
-
-gulp.task("delHtml", function () {
-  return del("build/*.html");
 });
 
 gulp.task("images", function () {
