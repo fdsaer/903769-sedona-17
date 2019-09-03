@@ -50,9 +50,9 @@ gulp.task("html", function () {
 
 gulp.task("copy", function () {
   return gulp.src([
-    "source/css/**/*.*"
-    "source/js/**/*.*"
-    "source/img/**/*.*",
+    "source/css/**/*.*",
+    "source/js/**/*.*",
+    "source/img/*.*",
     "source/fonts/**/*.{woff,woff2}"
     ], {base: "source"})
     .pipe(gulp.dest("build"));

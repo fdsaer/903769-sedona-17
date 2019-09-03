@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="css/style-min.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -52,7 +52,7 @@
         <div class="site-list__logo-wrapper">
           <a class="site-list__logo" href="index.html" tabindex="-1">
             <picture>
-              <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 769px)">
+              <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 786px)">
               <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 501px)">
               <img  class="site-list__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
             </picture>
@@ -73,9 +73,9 @@
           <li class="gallery-list__item">
             <a class="gallery-list__link" href="#">
               <picture>
-                <source media="(min-width: 769px)" srcset="img/photo-sunset-desktop@1x.jpg, img/photo-sunset-desktop@2x.jpg 2x">
+                <source media="(min-width: 786px)" srcset="img/photo-sunset-desktop@1x.jpg, img/photo-sunset-desktop@2x.jpg 2x">
                 <source media="(min-width: 501px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
-                <img class="gallery-list__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x">
+                <img class="gallery-list__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Неродные просторы">
               </picture>
             </a>
             <div class="gallery-list__caption">
@@ -97,9 +97,9 @@
           <li class="gallery-list__item">
             <a class="gallery-list__link" href="#">
               <picture>
-                <source media="(min-width: 769px)" srcset="img/photo-cactus-desktop@1x.jpg, img/photo-cactus-desktop@2x.jpg 2x">
+                <source media="(min-width: 786px)" srcset="img/photo-cactus-desktop@1x.jpg, img/photo-cactus-desktop@2x.jpg 2x">
                 <source media="(min-width: 501px)" srcset="img/photo-cactus-tablet@1x.jpg, img/photo-cactus-tablet@2x.jpg 2x">
-                <img class="gallery-list__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x">
+                <img class="gallery-list__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Местная растительность">
               </picture>
             </a>
             <div class="gallery-list__caption">
@@ -121,9 +121,9 @@
           <li class="gallery-list__item">
             <a class="gallery-list__link" href="#">
               <picture>
-                <source media="(min-width: 769px)" srcset="img/photo-roads-desktop@1x.jpg, img/photo-roads-desktop@2x.jpg 2x">
+                <source media="(min-width: 786px)" srcset="img/photo-roads-desktop@1x.jpg, img/photo-roads-desktop@2x.jpg 2x">
                 <source media="(min-width: 501px)" srcset="img/photo-roads-tablet@1x.jpg, img/photo-roads-tablet@2x.jpg 2x">
-                <img class="gallery-list__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x">
+                <img class="gallery-list__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север">
               </picture>
             </a>
             <div class="gallery-list__caption">
@@ -145,9 +145,9 @@
           <li class="gallery-list__item">
             <a class="gallery-list__link" href="#">
               <picture>
-                <source media="(min-width: 769px)" srcset="img/photo-bridge-desktop@1x.jpg, img/photo-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 786px)" srcset="img/photo-bridge-desktop@1x.jpg, img/photo-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 501px)" srcset="img/photo-bridge-tablet@1x.jpg, img/photo-bridge-tablet@2x.jpg 2x">
-                <img class="gallery-list__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x">
+                <img class="gallery-list__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
               </picture>
             </a>
             <div class="gallery-list__caption">
@@ -173,9 +173,9 @@
         <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <div class="video__wrapper">
           <picture>
-            <source media="(min-width: 769px)" srcset="../img/video-desktop@1x.jpg 1x, ../img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 786px)" srcset="../img/video-desktop@1x.jpg 1x, ../img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 501px)" srcset="../img/video-tablet@1x.jpg 1x, ../img/video-tablet@2x.jpg 2x">
-            <img class="video__preview" width="320" height="201" src="../img/video-mobile@1x.jpg" srcset="../img/video-mobile@2x.jpg 2x">
+            <img class="video__preview" src="../img/video-mobile@1x.jpg" srcset="../img/video-mobile@2x.jpg 2x" width="320" height="201" alt="Видеопрезентация">
           </picture>
           <div class="video__controls">
             <button class="video__replay-toggle">
@@ -213,19 +213,19 @@
           <li class="social-links__item">
             <a class="social-links__link" href="https://twitter.com/htmlacademy_ru">
               <span class="visually-hidden">twitter</span>
-              <img class="social-links__image" src="../img/icon-twitter.svg" width="" height="">
+              <img class="social-links__image" src="../img/icon-twitter.svg" width="18" height="15" alt="twitter">
             </a>
           </li>
           <li class="social-links__item">
             <a class="social-links__link" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">facebook</span>
-              <img class="social-links__image" src="../img/icon-facebook.svg" width="" height="">
+              <img class="social-links__image" src="../img/icon-facebook.svg" width="9" height="19" alt="facebook">
             </a>
           </li>
           <li class="social-links__item">
             <a class="social-links__link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">youtube</span>
-              <img class="social-links__image" src="../img/icon-youtube.svg" width="" height="">
+              <img class="social-links__image" src="../img/icon-youtube.svg" width="20" height="14" alt="youtube">
             </a>
           </li>
         </ul>
